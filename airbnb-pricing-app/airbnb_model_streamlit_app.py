@@ -1,3 +1,8 @@
+import numpy as np
+# Monkey patch for numpy compatibility
+if not hasattr(np, '_core'):
+    np._core = np.core
+    
 import streamlit as st
 import pandas as pd
 import numpy as np
